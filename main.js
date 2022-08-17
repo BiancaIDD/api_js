@@ -11,12 +11,11 @@ function createCards() {
     for (let category of categories.communityCategories) {
       const card = document.createRange().createContextualFragment(/*html*/ `
         <div class="card">
-          <div
+          <div 
+          class="style_background"
             style="
               background-image: url('${category.logo}');
-              background-size: contain;
-              border-radius: 30px 30px 0px 0px;
-              height: 140px;
+              
             "
           >
             <img
@@ -31,6 +30,7 @@ function createCards() {
           </div>
         </div>
       `);
+      
       const main = document.querySelector("main")
       main.append(card)
     }
