@@ -14,7 +14,7 @@ function createCards() {
           <div 
           class="style_background"
             style="
-              background-image: url('${category.logo}');
+              background-image: url('${category.background}');
               
             "
           >
