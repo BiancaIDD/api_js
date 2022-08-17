@@ -13,24 +13,26 @@ function createCards() {
         <div class="card">
           <div
             style="
-              background-image: url('https://storage.googleapis.com/bucket-larnu/media/business/145/images/YS4GQW1Q.png');
+              background-image: url('${category.logo}');
               background-size: contain;
               border-radius: 30px 30px 0px 0px;
               height: 140px;
             "
           >
             <img
-              src="https://storage.googleapis.com/bucket-larnu/media/business/123/images/NHNE8PPG.png"
+              src="${category.icon}"
             />
           </div>
           <div>
-            <h3>SEO</h3>
-            <p>Total Quizes: 34</p>
-            <p>Users: 130</p>
+            <h3>${category.name}</h3>
+            <p>Total Quizes: ${category.quizzesDone}</p>
+            <p>Users: ${category.users}</p>
             <a href="https://www.larnu.com">Go to LarnU</a>
           </div>
         </div>
       `);
+      const main = document.querySelector("main")
+      main.append(card)
     }
   });
 }
